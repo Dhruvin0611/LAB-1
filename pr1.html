@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Collection Manager</title>
+    <link rel="stylesheet" href="pr1.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Movie Collection Manager</h1>
+        </header>
+
+        <section class="movie-form">
+            <h2>Add a New Movie</h2>
+            <form id="movieForm">
+                <label for="title">Title:</label>
+                <input type="text" id="title" required>
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre" required>
+                <label for="rating">Rating:</label>
+                <input type="number" id="rating" step="0.1" required>
+                <label for="releaseYear">Release Year:</label>
+                <input type="number" id="releaseYear" required>
+                <button type="submit">Add Movie</button>
+            </form>
+        </section>
+
+        <section class="movie-list">
+            <h2>All Movies</h2>
+            <ul id="movieList"></ul>
+        </section>
+
+        <section class="movie-filter">
+            <h2>Filter Movies by Genre</h2>
+            <select id="genreFilter">
+                <option value="All">All</option>
+                <option value="Action">Action</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Sci-Fi">Sci-Fi</option>
+            </select>
+            <div id="filteredMovies"></div>
+        </section>
+
+        <section class="highest-rated">
+            <h2>Highest Rated Movie</h2>
+            <p id="highestRatedMovie"></p>
+        </section>
+
+        <section class="movies-after-year">
+            <h2>Movies Released After 2000</h2>
+            <ul id="moviesAfter2000"></ul>
+        </section>
+    </div>
+
+    <script src="pr1.js"></script>
+</body>
+</html>
